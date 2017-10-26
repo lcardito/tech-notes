@@ -12,4 +12,4 @@ Developed by Facebook inbox search, optimised for:
 
 ### Examples
 - [Simple Snitch](simple_snitch/)
-- [Gossiping Snitch](gossiping_snich/)
+- [Gossiping Snitch](gossiping_snitch/)
