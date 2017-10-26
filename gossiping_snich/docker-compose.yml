@@ -1,0 +1,19 @@
+version: '2'
+services:
+  node_1:
+    container_name: "node_1"
+    image: cassandra
+    environment:
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RC1
+  node_2:
+    container_name: "node_2"
+    image: cassandra
+    environment:
+      - CASSANDRA_SEEDS=node_1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_DC=DC2
+      - CASSANDRA_RACK=RC1
+    links:
+      - node_1
