@@ -1,8 +1,12 @@
 # Simple Snitch
 
 Snitch is how Cassandra does request routing.
-* **SimpleSnitch**: Single DC, development env
-* **GossipingPropertyFileSnitch**: Gossip protocol. A property file in the node tells to the cluster where the node is. It's used to distinguish racks, DCs.
+
+> A snitch determines which datacenters and racks nodes belong to. 
+> They inform Cassandra about the network topology so that requests are routed efficiently and allows Cassandra to distribute replicas by grouping machines into datacenters and racks
+
+* [**SimpleSnitch**](https://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archSnitchSimple.html): Single DC, development env
+* [**GossipingPropertyFileSnitch**](https://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archsnitchGossipPF.html): Gossip protocol. A property file in the node tells to the cluster where the node is. It's used to distinguish racks, DCs.
 * **PropertyFileSnitch**: Entire topology in one property file
 * **CloudSnitches**
 
