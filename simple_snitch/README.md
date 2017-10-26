@@ -55,4 +55,4 @@ In the cassandra property file see seed_provider:
           - seeds: "172.17.0.2"
 ```
 
-[Next](gossiping_snitch/)
+[Next](/gossiping_snitch/)
