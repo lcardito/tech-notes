@@ -20,5 +20,20 @@ Developed by Facebook inbox search, optimised for:
 
 ### CheatSheet
 
-#### nodetool status
-`docker exec -ti cass_n1 nodetool status`
+#### nodetool
+
+`nodetool status`
+
+`nodetool describering pluralsight`
+
+#### cqlsh
+Cassandra Query Language
+
+`docker exec -ti node_1 cqlsh`
+
+##### create keyspace
+```
+create keyspace pluralsight with replication = {'class': 'SimpleStrategy' , 'replication_factor' : 3}
+
+describe keyspaces
+```
