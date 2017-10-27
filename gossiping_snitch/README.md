@@ -41,4 +41,19 @@ Status=Up/Down
 UN  172.20.0.3  74.67 KiB  256          100.0%            06423b60-7e83-4bd1-bd7d-c31e531caaa8  RC1```
 ``` 
 
+The `/etc/cassandra/cassandra.yml` config will reflect this configuration:
+
+```
+endpoint_snitch: GossipingPropertyFileSnitch
+```
+
+Also in `/etc/cassandra/cassandra-rackdc.properties`
+
+```
+dc= DC2
+rack= RC1
+```
+
+Each logical DC has it's own complete range of tokens allocated to the vNodes provided by the node in that DC.
+
 [Next]()
