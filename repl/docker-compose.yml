@@ -3,15 +3,22 @@ services:
   node_1:
     container_name: "node_1"
     image: cassandra
+    environment:
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RC1
   node_2:
     container_name: "node_2"
     image: cassandra
     environment:
       - CASSANDRA_SEEDS=node_1
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RC2
   node_3:
     container_name: "node_3"
     image: cassandra
     environment:
       - CASSANDRA_SEEDS=node_1
+      - CASSANDRA_DC=DC2
+      - CASSANDRA_RACK=RC1
     links:
       - node_1
